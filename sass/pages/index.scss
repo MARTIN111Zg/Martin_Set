@@ -1,0 +1,256 @@
+@import "../components/video";
+
+.header__index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__grid {
+    width: 96%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 4rem 5rem repeat(3, 1fr) 5rem 4rem;
+    grid-template-rows: 14rem repeat(6, 1fr);
+  }
+}
+
+.index-text {
+  grid-column: 3/6;
+  grid-row: 2/4;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__h1--1 {
+    font-size: 4.6rem;
+    color: var(--white);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 0;
+  }
+
+  &__h1--2 {
+    font-size: 4.6rem;
+    color: var(--white);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+
+.index-btn__wrapper {
+  grid-column: 3/5;
+  grid-row: 5/7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 2rem 2rem 2rem;
+
+  &__text {
+    font-family: var(--font-sec);
+    font-size: 2.7rem;
+    color: rgb(172, 165, 165);
+    letter-spacing: 0.4rem;
+  }
+
+  &__text span {
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    color: var(--white);
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+
+  &__box a {
+    color: var(--white);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 1rem 3.5rem;
+    border: 2px solid var(--white);
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.3rem;
+  }
+}
+
+.build {
+  grid-column: 1/2;
+  grid-row: 2/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__h4 {
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+
+    flex: 1;
+    letter-spacing: 0.4rem;
+  }
+}
+
+.frontend {
+  grid-column: 1/2;
+  grid-row: 5/7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__h4 {
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    flex: 1;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.rotate {
+  grid-column: 5/6;
+  grid-row: 4/7;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &__wrapper {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: rotate(-45deg);
+
+    &__text {
+      font-size: 1.6rem;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    &__text--2 {
+      font-size: 1.3rem;
+      color: #fff;
+    }
+  }
+}
+
+.icons {
+  grid-column: 7/-1;
+  grid-row: 4/7;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.icons__li {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons__li__a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.icons__li__a__svg {
+  fill: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.icons__li.phone::before {
+  content: "099-786-943";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  transform: scaleY(0);
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s linear;
+}
+
+.icons__li.phone:hover::before {
+  width: 100%;
+  transform: scaleY(1);
+}
+
+.icons__li.mail::before {
+  content: "martingorupic@gmail.com";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  transform: scaleY(0);
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s linear;
+  line-height: 1;
+}
+
+.icons__li.mail:hover::before {
+  width: 100%;
+  height: 120%;
+  transform: scaleY(1);
+}
+
+.text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  color: #fff;
+  display: none;
+  z-index: 5000;
+  text-transform: uppercase;
+}

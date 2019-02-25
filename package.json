@@ -1,0 +1,24 @@
+{
+  "name": "martin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.17.0",
+    "parcel-bundler": "^1.11.0",
+    "cssnano": "^4.1.8"
+  },
+  "dependencies": {
+    "sass": "^1.17.0",
+    "animejs": "^3.0.1",
+    "lib": "^4.0.0"
+  }
+}
